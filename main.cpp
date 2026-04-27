@@ -11,7 +11,7 @@
 static int slices = 16;
 static int stacks = 16;
 
-/* GLUT callback Handlers */
+
 
 static void resize(int width, int height)
 {
