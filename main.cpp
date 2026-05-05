@@ -11,13 +11,26 @@ using namespace std;
 const int WIDTH = 800;
 const int HEIGHT = 600;
 
+// Egg structure
+struct Egg {
+    float x, y;
+    float speed;
+    int type;
+    bool active;
+    int chickenId;
+};
+
+const int MAX_EGGS = 30;
+Egg eggs[MAX_EGGS];
+
+
 // Function declarations
 void display();
 void initOpenGL();
 void drawRect(float x, float y, float width, float height, float r, float g, float b);
 void drawCircle(float x, float y, float radius, float r, float g, float b);
-//void initEggs();
-//void spawnEgg();
+void initEggs();
+void spawnEgg();
 
 // Draw rectangle
 void drawRect(float x, float y, float width, float height, float r, float g, float b) {
@@ -41,16 +54,56 @@ void drawCircle(float x, float y, float radius, float r, float g, float b) {
     glEnd();
 }
 
-// Updated display
+
+// Initialize all eggs
+void initEggs() {
+    for(int i = 0; i < MAX_EGGS; i++) {
+        eggs[i].active = false;
+        eggs[i].chickenId = -1;
+    }
+}
+
+// Spawn a new egg
+void spawnEgg() {
+    for(int i = 0; i < MAX_EGGS; i++) {
+        if(!eggs[i].active) {
+            int chickenChoice = rand() % 3;
+            eggs[i].x = chickenX[chickenChoice] + 15;
+            eggs[i].y = chickenY - 20;
+            eggs[i].speed = 2.0f + (rand() % 5) / 2.0f;
+
+            int r = rand() % 10;
+            if(r <= 6) eggs[i].type = 0;
+            else if(r == 7) eggs[i].type = 1;
+            else if(r == 8) eggs[i].type = 2;
+            else eggs[i].type = 3;
+
+            eggs[i].active = true;
+            eggs[i].chickenId = chickenChoice;
+            break;
+        }
+    }
+}
+
+// Update display
 void display() {
     glClearColor(0.5f, 0.7f, 0.9f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    drawRect(350, 30, 100, 25, 0.65f, 0.41f, 0.16f);  // Basket
-    drawCircle(400, 500, 25, 1.0f, 1.0f, 0.0f);        // Chicken body
+    drawStick();
+    drawChicken();
+    drawBasket();
+
+    // Draw all active eggs
+    for(int i = 0; i < MAX_EGGS; i++) {
+        if(eggs[i].active) {
+            drawEgg(eggs[i].x, eggs[i].y, eggs[i].type);
+        }
+    }
 
     glutSwapBuffers();
 }
+
 
 // Initialize OpenGL
 void initOpenGL() {
