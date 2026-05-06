@@ -31,6 +31,9 @@ void drawRect(float x, float y, float width, float height, float r, float g, flo
 void drawCircle(float x, float y, float radius, float r, float g, float b);
 void initEggs();
 void spawnEgg();
+void keyboard(unsigned char key, int x, int y);
+//void specialKeys(int key, int x, int y);
+
 
 // Draw rectangle
 void drawRect(float x, float y, float width, float height, float r, float g, float b) {
@@ -85,6 +88,33 @@ void spawnEgg() {
     }
 }
 
+// Keyboard handler
+void keyboard(unsigned char key, int x, int y) {
+    if(currentState == PLAYING) {
+        if(key == 'p' || key == 'P') {
+            currentState = PAUSED;
+        }
+        else if(key == 27) {  // ESC
+            currentState = MENU;
+        }
+        else if(key == 'a' || key == 'A') {
+            basketX -= 30;
+        }
+        else if(key == 'd' || key == 'D') {
+            basketX += 30;
+        }
+    }
+    else if(currentState == PAUSED) {
+        if(key == 'p' || key == 'P') {
+            currentState = PLAYING;
+        }
+    }
+    
+    if(basketX < 0) basketX = 0;
+    if(basketX > WIDTH - BASKET_WIDTH) basketX = WIDTH - BASKET_WIDTH;
+    glutPostRedisplay();
+}
+ 
 // Update display
 void display() {
     glClearColor(0.5f, 0.7f, 0.9f, 1.0f);
