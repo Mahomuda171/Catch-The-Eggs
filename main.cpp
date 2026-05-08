@@ -238,10 +238,6 @@ void display() {
 
 
 //////////Marwa //////
-// ============================================
-// PART 5: Game Logic, Timer and Collision
-// Add this code to PART 4
-// ============================================
 
 // Game states
 enum GameState { MENU, PLAYING, PAUSED, GAMEOVER };
@@ -282,4 +278,50 @@ void updateGame() {
 
     // Randomly spawn eggs
     if(rand() % 35 == 0) spawnEgg();
+}
+
+// Timer function for animation
+void timer(int value) {
+    if(currentState == PLAYING) {
+        timeLeft -= 0.016f;
+        updateGame();
+
+        if(timeLeft <= 0) {
+            if(score > highScore) highScore = score;
+            currentState = GAMEOVER;
+        }
+    }
+
+    glutPostRedisplay();
+    glutTimerFunc(16, timer, 0);
+}
+
+// Draw text function
+void drawText(float x, float y, string text) {
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glRasterPos2f(x, y);
+    for(char c : text) {
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c);
+    }
+}
+
+// Update display to show score and time
+void display() {
+    glClearColor(0.5f, 0.7f, 0.9f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    drawStick();
+    drawChicken();
+
+    for(int i = 0; i < MAX_EGGS; i++) {
+        if(eggs[i].active) drawEgg(eggs[i].x, eggs[i].y, eggs[i].type);
+    }
+
+    drawBasket();
+
+    // Show score and time
+    drawText(10, HEIGHT - 30, "Score: " + to_string(score));
+    drawText(WIDTH - 150, HEIGHT - 30, "Time: " + to_string((int)timeLeft));
+
+    glutSwapBuffers();
 }
