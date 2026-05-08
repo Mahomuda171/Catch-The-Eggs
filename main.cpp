@@ -109,12 +109,12 @@ void keyboard(unsigned char key, int x, int y) {
             currentState = PLAYING;
         }
     }
-    
+
     if(basketX < 0) basketX = 0;
     if(basketX > WIDTH - BASKET_WIDTH) basketX = WIDTH - BASKET_WIDTH;
     glutPostRedisplay();
 }
- 
+
 // Update display
 void display() {
     glClearColor(0.5f, 0.7f, 0.9f, 1.0f);
@@ -187,7 +187,7 @@ void drawEgg(float x, float y, int type) {
 // Draw basket
 void drawBasket() {
     drawRect(basketX, 30, BASKET_WIDTH, BASKET_HEIGHT, 0.65f, 0.41f, 0.16f);
-    
+
     glColor3f(0.4f, 0.2f, 0.0f);
     glBegin(GL_LINE_LOOP);
     glVertex2f(basketX, 30);
@@ -223,15 +223,63 @@ void drawChicken() {
 void display() {
     glClearColor(0.5f, 0.7f, 0.9f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
-    
+
     drawStick();
     drawChicken();
     drawBasket();
-    
+
     // Test eggs
     drawEgg(200, 400, 0);
     drawEgg(400, 350, 1);
     drawEgg(600, 300, 2);
-    
+
     glutSwapBuffers();
+}
+
+
+//////////Marwa //////
+// ============================================
+// PART 5: Game Logic, Timer and Collision
+// Add this code to PART 4
+// ============================================
+
+// Game states
+enum GameState { MENU, PLAYING, PAUSED, GAMEOVER };
+GameState currentState = PLAYING;  // Temporary set to PLAYING for testing
+
+// Game variables
+int score = 0;
+float timeLeft = 60.0f;
+int highScore = 0;
+
+// Function declarations
+void updateGame();
+void timer(int value);
+
+// Update game logic
+void updateGame() {
+    for(int i = 0; i < MAX_EGGS; i++) {
+        if(eggs[i].active) {
+            eggs[i].y -= eggs[i].speed;
+
+            // Collision with basket
+            if(eggs[i].y + 15 < 55 && eggs[i].y + 15 > 30 &&
+               eggs[i].x + 12 > basketX && eggs[i].x < basketX + BASKET_WIDTH) {
+
+                if(eggs[i].type == 0) score += 1;
+                else if(eggs[i].type == 1) score += 10;
+                else if(eggs[i].type == 2) score += 5;
+                else if(eggs[i].type == 3) score -= 10;
+
+                eggs[i].active = false;
+            }
+            // Remove if off screen
+            else if(eggs[i].y < 0) {
+                eggs[i].active = false;
+            }
+        }
+    }
+
+    // Randomly spawn eggs
+    if(rand() % 35 == 0) spawnEgg();
 }
