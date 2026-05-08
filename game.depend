@@ -1,4 +1,15 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
+1777287721 source:e:\catch-the-eggs\main.cpp
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<stdlib.h>
+
+1770617975 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\glut.h
+	"freeglut_std.h"
+
+1770617975 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\freeglut_std.h
+=======
 1777553407 source:e:\code blocks\graphics\game\main.cpp
 	<GL/glut.h>
 	<stdlib.h>
@@ -8,6 +19,7 @@
 	"freeglut_std.h"
 
 1426328128 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\freeglut_std.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<windows.h>
 	<EGL/egl.h>
 	<GLES/gl.h>
@@ -18,7 +30,11 @@
 	<GL/glu.h>
 	<stdlib.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\windows.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\windows.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_mingw.h>
 	<sdkddkver.h>
 	<winresrc.h>
@@ -58,11 +74,43 @@
 	<mcx.h>
 	<imm.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_mingw.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_mingw.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	"_mingw_mac.h"
 	"_mingw_secapi.h"
 	"_cygwin.h"
 	<vadefs.h>
+<<<<<<< HEAD
+	"sdks/_mingw_directx.h"
+	"sdks/_mingw_ddk.h"
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_mingw_mac.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_mingw_secapi.h
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_cygwin.h
+	<stddef.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\stddef.h
+	<crtdefs.h>
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\crtdefs.h
+	<_mingw.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\vadefs.h
+	<_mingw.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdks\_mingw_directx.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdks\_mingw_ddk.h
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdkddkver.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winresrc.h
+=======
 	"sdks/_mingw_ddk.h"
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_mingw_mac.h
@@ -92,6 +140,7 @@
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdkddkver.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winresrc.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<winuser.rh>
 	<commctrl.rh>
 	<dde.rh>
@@ -99,6 +148,38 @@
 	<dlgs.h>
 	<winver.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winuser.rh
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\commctrl.rh
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\dde.rh
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winnt.rh
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\dlgs.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winver.h
+	<_mingw.h>
+	<_mingw_unicode.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_mingw_unicode.h
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\excpt.h
+	<crtdefs.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\stdarg.h
+	<_mingw_stdarg.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_mingw_stdarg.h
+	<vadefs.h>
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\windef.h
+	<minwindef.h>
+	<winnt.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\minwindef.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winuser.rh
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\commctrl.rh
@@ -130,11 +211,25 @@
 	<winnt.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\minwindef.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_mingw.h>
 	<winapifamily.h>
 	<specstrings.h>
 	<winnt.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winapifamily.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\specstrings.h
+	<sal.h>
+	<driverspecs.h>
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sal.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\driverspecs.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winnt.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\specstrings.h
 	<sal.h>
 	<driverspecs.h>
@@ -149,6 +244,7 @@
 	<concurrencysal.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winnt.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_mingw_unicode.h>
 	<_mingw.h>
 	<ctype.h>
@@ -182,6 +278,19 @@
 	"pshpack4.h"
 	"poppack.h"
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ctype.h
+	<crtdefs.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\apiset.h
+	<_mingw.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\psdk_inc\intrin-impl.h
+	<intrin.h>
+	<psdk_inc/intrin-impl.h>
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\intrin.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ctype.h
 	<crtdefs.h>
 
@@ -193,6 +302,7 @@
 	<psdk_inc/intrin-impl.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\intrin.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<crtdefs.h>
 	<setjmp.h>
 	<stddef.h>
@@ -201,7 +311,10 @@
 	<errno.h>
 	<malloc.h>
 	<x86intrin.h>
+<<<<<<< HEAD
+=======
 	<cpuid.h>
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<mmintrin.h>
 	<mm3dnow.h>
 	<xmmintrin.h>
@@ -209,16 +322,63 @@
 	<pmmintrin.h>
 	<mm3dnow.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\setjmp.h
+	<crtdefs.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\stdlib.h
+	<crtdefs.h>
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\setjmp.h
 	<crtdefs.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\stdlib.h
 	<corecrt.h>
 	<corecrt_wstdlib.h>
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<limits.h>
 	<sec_api/stdlib_s.h>
 	<malloc.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\limits.h
+	<crtdefs.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sec_api\stdlib_s.h
+	<stdlib.h>
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\malloc.h
+	<crtdefs.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\errno.h
+	<crtdefs.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\basetsd.h
+	<_mingw.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\guiddef.h
+	<_mingw.h>
+	<string.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\string.h
+	<crtdefs.h>
+	<sec_api/string_s.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sec_api\string_s.h
+	<string.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\pshpack4.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\poppack.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\pshpack2.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\pshpack8.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ktmtypes.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winbase.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\corecrt_wstdlib.h
 	<corecrt.h>
 
@@ -260,6 +420,7 @@
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ktmtypes.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winbase.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_mingw_unicode.h>
 	<apisetcconv.h>
 	<winapifamily.h>
@@ -296,182 +457,311 @@
 	<winerror.h>
 	<timezoneapi.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\apisetcconv.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\minwinbase.h
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\bemapiset.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\apisetcconv.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\minwinbase.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\bemapiset.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\debugapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\debugapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\errhandlingapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\errhandlingapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\fibersapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\fibersapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\fileapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\fileapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\handleapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\handleapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\heapapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\heapapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ioapiset.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ioapiset.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\interlockedapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\interlockedapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\jobapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\jobapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\libloaderapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\libloaderapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\memoryapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\memoryapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\namedpipeapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\namedpipeapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\namespaceapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\namespaceapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\processenv.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\processenv.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\processthreadsapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\processthreadsapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\processtopologyapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\processtopologyapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\profileapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\profileapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\realtimeapiset.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\realtimeapiset.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\securityappcontainer.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\securityappcontainer.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\securitybaseapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\securitybaseapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\synchapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\synchapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sysinfoapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sysinfoapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\systemtopologyapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\systemtopologyapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\threadpoolapiset.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\threadpoolapiset.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\threadpoollegacyapiset.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\threadpoollegacyapiset.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\utilapiset.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\utilapiset.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wow64apiset.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wow64apiset.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winerror.h
+	<fltwinerror.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\fltwinerror.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\timezoneapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winerror.h
 	<fltwinerror.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\fltwinerror.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\timezoneapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wingdi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wingdi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<winapifamily.h>
 	<_mingw_unicode.h>
 	<pshpack1.h>
@@ -485,9 +775,15 @@
 	<pshpack4.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\pshpack1.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winuser.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\pshpack1.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winuser.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<winapifamily.h>
 	<_mingw_unicode.h>
 	<apisetcconv.h>
@@ -499,27 +795,55 @@
 	<poppack.h>
 	<tvout.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\tvout.h
+	<guiddef.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winnls.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\tvout.h
 	<guiddef.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winnls.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<winapifamily.h>
 	<datetimeapi.h>
 	<libloaderapi.h>
 	<stringapiset.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\datetimeapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\datetimeapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<minwinbase.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\stringapiset.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\stringapiset.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<minwindef.h>
 	<winnls.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wincon.h
+	<_mingw_unicode.h>
+	<winapifamily.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winreg.h
+	<_mingw_unicode.h>
+	<reason.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\reason.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winnetwk.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wincon.h
 	<_mingw_unicode.h>
 	<winapifamily.h>
@@ -532,10 +856,37 @@
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\reason.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winnetwk.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<winapifamily.h>
 	<_mingw_unicode.h>
 	<wnnc.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wnnc.h
+	<winapifamily.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\virtdisk.h
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\cderr.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\dde.h
+	<windef.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ddeml.h
+	<_mingw_unicode.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\lzexpand.h
+	<_mingw_unicode.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\mmsystem.h
+	<_mingw_unicode.h>
+	<pshpack1.h>
+	<poppack.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\nb30.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpc.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wnnc.h
 	<winapifamily.h>
 
@@ -612,6 +963,7 @@
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\nb30.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpc.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_mingw.h>
 	<windows.h>
 	<basetsd.h>
@@ -624,12 +976,27 @@
 	<rpcasync.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcdce.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcdce.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_mingw_unicode.h>
 	<specstrings.h>
 	<guiddef.h>
 	<rpcdcep.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcdcep.h
+	<_mingw_unicode.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcnsi.h
+	<_mingw_unicode.h>
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcnterr.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcasync.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcdcep.h
 	<_mingw_unicode.h>
 
@@ -639,22 +1006,35 @@
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcnterr.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcasync.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_mingw_unicode.h>
 	<pshpack8.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\shellapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\shellapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<winapifamily.h>
 	<_mingw_unicode.h>
 	<specstrings.h>
 	<pshpack1.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winperf.h
+	<pshpack8.h>
+	<poppack.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winsock.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winperf.h
 	<pshpack8.h>
 	<poppack.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winsock.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<windows.h>
 	<_timeval.h>
 	<_bsd_types.h>
@@ -667,6 +1047,22 @@
 	<psdk_inc/_xmitfile.h>
 	<psdk_inc/_wsa_errnos.h>
 
+<<<<<<< HEAD
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_timeval.h
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_bsd_types.h
+	<_mingw.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\inaddr.h
+	<_bsd_types.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\psdk_inc\_socket_types.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\psdk_inc\_fd_types.h
+	<psdk_inc/_socket_types.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\psdk_inc\_ip_types.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_timeval.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_bsd_types.h
@@ -681,10 +1077,23 @@
 	<psdk_inc/_socket_types.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\psdk_inc\_ip_types.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_bsd_types.h>
 	<inaddr.h>
 	<_timeval.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\psdk_inc\_ip_mreq1.h
+	<inaddr.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\psdk_inc\_wsadata.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\psdk_inc\_xmitfile.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\psdk_inc\_wsa_errnos.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wincrypt.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\psdk_inc\_ip_mreq1.h
 	<inaddr.h>
 
@@ -695,6 +1104,7 @@
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\psdk_inc\_wsa_errnos.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wincrypt.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_mingw.h>
 	<_mingw_unicode.h>
 	<guiddef.h>
@@ -704,6 +1114,20 @@
 	<ncrypt.h>
 	<dpapi.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\bcrypt.h
+	<winapifamily.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ncrypt.h
+	<winapifamily.h>
+	<bcrypt.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\dpapi.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winefs.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winscard.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\bcrypt.h
 	<winapifamily.h>
 
@@ -716,32 +1140,49 @@
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winefs.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winscard.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_mingw_unicode.h>
 	<wtypes.h>
 	<winioctl.h>
 	"winsmcrd.h"
 	"SCardErr.h"
 
+<<<<<<< HEAD
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wtypes.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wtypes.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
 	<ole2.h>
 	<wtypesbase.h>
 
+<<<<<<< HEAD
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcndr.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcndr.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<pshpack8.h>
 	<basetsd.h>
 	<rpcnsip.h>
 	<rpcsal.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcnsip.h
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcsal.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ole2.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcnsip.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\rpcsal.h
 	<specstrings.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ole2.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<winapifamily.h>
 	<pshpack8.h>
 	<winerror.h>
@@ -750,7 +1191,11 @@
 	<oleidl.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\objbase.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\objbase.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<winapifamily.h>
 	<rpc.h>
 	<rpcndr.h>
@@ -761,7 +1206,11 @@
 	<propidl.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\combaseapi.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\combaseapi.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<apiset.h>
 	<apisetcconv.h>
 	<rpc.h>
@@ -775,7 +1224,11 @@
 	<cguid.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wtypesbase.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\wtypesbase.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
@@ -783,7 +1236,11 @@
 	<basetsd.h>
 	<guiddef.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\unknwnbase.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\unknwnbase.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
@@ -791,7 +1248,11 @@
 	<wtypesbase.h>
 	<winapifamily.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\objidlbase.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\objidlbase.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
@@ -800,9 +1261,15 @@
 	<wtypesbase.h>
 	<winapifamily.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\cguid.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\objidl.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\cguid.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\objidl.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
@@ -812,7 +1279,11 @@
 	<winapifamily.h>
 	<winapifamily.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\unknwn.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\unknwn.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
@@ -820,7 +1291,11 @@
 	<wtypes.h>
 	<winapifamily.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\urlmon.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\urlmon.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
@@ -831,7 +1306,11 @@
 	<msxml.h>
 	<winapifamily.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\oleidl.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\oleidl.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
@@ -839,7 +1318,11 @@
 	<objidl.h>
 	<winapifamily.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\servprov.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\servprov.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
@@ -847,17 +1330,28 @@
 	<objidl.h>
 	<winapifamily.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\msxml.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\msxml.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
 	<ole2.h>
 	<unknwn.h>
+<<<<<<< HEAD
+	<objidl.h>
+	<oaidl.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\oaidl.h
+=======
 	<wtypes.h>
 	<objidl.h>
 	<oaidl.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\oaidl.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
@@ -865,7 +1359,11 @@
 	<objidl.h>
 	<winapifamily.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\propidl.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\propidl.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<rpc.h>
 	<rpcndr.h>
 	<windows.h>
@@ -875,12 +1373,20 @@
 	<oaidl.h>
 	<winapifamily.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\oleauto.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\oleauto.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<pshpack8.h>
 	<oaidl.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winioctl.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winioctl.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<pshpack1.h>
 	<poppack.h>
 	<pshpack1.h>
@@ -894,6 +1400,18 @@
 	<pshpack1.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winsmcrd.h
+	<_mingw_unicode.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\scarderr.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winspool.h
+	<_mingw_unicode.h>
+	<prsht.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\prsht.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winsmcrd.h
 	<_mingw_unicode.h>
 
@@ -904,21 +1422,38 @@
 	<prsht.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\prsht.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_mingw_unicode.h>
 	<pshpack8.h>
 	<pshpack4.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ole.h
+	<winapifamily.h>
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\commdlg.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\ole.h
 	<winapifamily.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\commdlg.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<winapifamily.h>
 	<_mingw_unicode.h>
 	<prsht.h>
 	<pshpack1.h>
 	<poppack.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\stralign.h
+	<sec_api/stralign_s.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sec_api\stralign_s.h
+	<stralign.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winsvc.h
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\stralign.h
 	<sec_api/stralign_s.h>
 
@@ -926,10 +1461,25 @@
 	<stralign.h>
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\winsvc.h
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
 	<_mingw.h>
 	<_mingw_unicode.h>
 	<apisetcconv.h>
 
+<<<<<<< HEAD
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\mcx.h
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\imm.h
+	<_mingw_unicode.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\gl.h
+	<windows.h>
+	<stddef.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\glu.h
+	<GL/gl.h>
+
+=======
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\mcx.h
 
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\imm.h
@@ -961,3 +1511,4 @@
 1738705850 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\math.h
 	<crtdefs.h>
 
+>>>>>>> 3cce4cbd9755bf0d9b9c6967ee657378cd41a894
