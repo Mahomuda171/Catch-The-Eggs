@@ -32,7 +32,11 @@ void drawCircle(float x, float y, float radius, float r, float g, float b);
 void initEggs();
 void spawnEgg();
 void keyboard(unsigned char key, int x, int y);
-//void specialKeys(int key, int x, int y);
+void specialKeys(int key, int x, int y);
+void mouseMotion(int x, int y);
+//void mouseClick(int button, int state, int x, int y);
+//void displayMenu();
+
 
 
 // Draw rectangle
@@ -114,6 +118,29 @@ void keyboard(unsigned char key, int x, int y) {
     if(basketX > WIDTH - BASKET_WIDTH) basketX = WIDTH - BASKET_WIDTH;
     glutPostRedisplay();
 }
+
+// Special keys (Arrow keys)
+void specialKeys(int key, int x, int y) {
+    if(currentState == PLAYING) {
+        if(key == GLUT_KEY_LEFT) basketX -= 30;
+        else if(key == GLUT_KEY_RIGHT) basketX += 30;
+        
+        if(basketX < 0) basketX = 0;
+        if(basketX > WIDTH - BASKET_WIDTH) basketX = WIDTH - BASKET_WIDTH;
+        glutPostRedisplay();
+    }
+}
+
+// Mouse motion for basket control
+void mouseMotion(int x, int y) {
+    if(currentState == PLAYING) {
+        basketX = x - BASKET_WIDTH/2;
+        if(basketX < 0) basketX = 0;
+        if(basketX > WIDTH - BASKET_WIDTH) basketX = WIDTH - BASKET_WIDTH;
+        glutPostRedisplay();
+    }
+}
+
  
 // Update display
 void display() {
