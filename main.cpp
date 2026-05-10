@@ -93,7 +93,7 @@ void drawEgg(float x, float y, int type) {
 // Draw basket
 void drawBasket() {
     drawRect(basketX, 30, BASKET_WIDTH, BASKET_HEIGHT, 0.65f, 0.41f, 0.16f);
-    
+
     glColor3f(0.4f, 0.2f, 0.0f);
     glBegin(GL_LINE_LOOP);
     glVertex2f(basketX, 30);
@@ -144,13 +144,13 @@ void spawnEgg() {
             eggs[i].x = chickenX[chickenChoice] + 15;
             eggs[i].y = chickenY - 20;
             eggs[i].speed = 2.0f + (rand() % 5) / 2.0f;
-            
+
             int r = rand() % 10;
             if(r <= 6) eggs[i].type = 0;      // 70% normal egg
             else if(r == 7) eggs[i].type = 1;  // 10% golden egg
             else if(r == 8) eggs[i].type = 2;  // 10% blue egg
             else eggs[i].type = 3;              // 10% poop
-            
+
             eggs[i].active = true;
             eggs[i].chickenId = chickenChoice;
             break;
@@ -161,21 +161,21 @@ void spawnEgg() {
 // Update game logic
 void updateGame() {
     if(currentState != PLAYING) return;
-    
+
     // Update egg positions and check collisions
     for(int i = 0; i < MAX_EGGS; i++) {
         if(eggs[i].active) {
             eggs[i].y -= eggs[i].speed;
-            
+
             // Collision with basket
             if(eggs[i].y + 15 < 55 && eggs[i].y + 15 > 30 &&
                eggs[i].x + 12 > basketX && eggs[i].x < basketX + BASKET_WIDTH) {
-                
+
                 if(eggs[i].type == 0) score += 1;
                 else if(eggs[i].type == 1) score += 10;
                 else if(eggs[i].type == 2) score += 5;
                 else if(eggs[i].type == 3) score -= 10;
-                
+
                 eggs[i].active = false;
             }
             // Remove if off screen
@@ -184,19 +184,19 @@ void updateGame() {
             }
         }
     }
-    
+
     // Randomly spawn eggs
     if(rand() % 35 == 0) spawnEgg();
-    
+
     // Update timer
     static int lastTime = 0;
     int currentTime = glutGet(GLUT_ELAPSED_TIME);
     if(lastTime == 0) lastTime = currentTime;
-    
+
     if(currentTime - lastTime >= 1000) {
         timeLeft -= 1;
         lastTime = currentTime;
-        
+
         if(timeLeft <= 0) {
             currentState = GAMEOVER;
             if(score > highScore) highScore = score;
@@ -214,52 +214,52 @@ void timer(int value) {
 // Display menu
 void displayMenu() {
     glClear(GL_COLOR_BUFFER_BIT);
-    
+
     // Title
     drawRect(0, HEIGHT/2 + 100, WIDTH, 50, 0.2f, 0.3f, 0.5f);
     glColor3f(1, 1, 1);
     glRasterPos2f(WIDTH/2 - 80, HEIGHT/2 + 130);
     for(char c : "CATCH THE EGGS") glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c);
-    
+
     // Menu options
     glColor3f(1, 1, 0);
     glRasterPos2f(WIDTH/2 - 50, HEIGHT/2 + 50);
     for(char c : "Press S to Start") glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c);
-    
+
     glColor3f(1, 1, 1);
     glRasterPos2f(WIDTH/2 - 70, HEIGHT/2 + 20);
     for(char c : "High Score: ") glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c);
-    
+
     char scoreStr[10];
     sprintf(scoreStr, "%d", highScore);
     glRasterPos2f(WIDTH/2 + 20, HEIGHT/2 + 20);
     for(int i = 0; scoreStr[i]; i++) glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, scoreStr[i]);
-    
+
     glutSwapBuffers();
 }
 
 // Display game over screen
 void displayGameOver() {
     glClear(GL_COLOR_BUFFER_BIT);
-    
+
     drawRect(0, HEIGHT/2 + 100, WIDTH, 50, 0.5f, 0.1f, 0.1f);
     glColor3f(1, 1, 1);
     glRasterPos2f(WIDTH/2 - 60, HEIGHT/2 + 130);
     for(char c : "GAME OVER") glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c);
-    
+
     glColor3f(1, 1, 0);
     glRasterPos2f(WIDTH/2 - 50, HEIGHT/2 + 50);
     char scoreStr[30];
     sprintf(scoreStr, "Your Score: %d", score);
     for(int i = 0; scoreStr[i]; i++) glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, scoreStr[i]);
-    
+
     glColor3f(1, 1, 1);
     glRasterPos2f(WIDTH/2 - 80, HEIGHT/2 + 20);
     for(char c : "Press R to Restart") glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c);
-    
+
     glRasterPos2f(WIDTH/2 - 60, HEIGHT/2 - 10);
     for(char c : "Press M for Menu") glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c);
-    
+
     glutSwapBuffers();
 }
 
@@ -274,31 +274,31 @@ void display() {
     else {
         glClearColor(0.5f, 0.7f, 0.9f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        
+
         drawStick();
         drawChicken();
         drawBasket();
-        
+
         // Draw all active eggs
         for(int i = 0; i < MAX_EGGS; i++) {
             if(eggs[i].active) {
                 drawEgg(eggs[i].x, eggs[i].y, eggs[i].type);
             }
         }
-        
+
         // Draw score and time
         glColor3f(1, 1, 1);
         char info[50];
         sprintf(info, "Score: %d  Time: %.0f", score, timeLeft);
         glRasterPos2f(10, HEIGHT - 20);
         for(int i = 0; info[i]; i++) glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, info[i]);
-        
+
         if(currentState == PAUSED) {
             glColor3f(1, 1, 0);
             glRasterPos2f(WIDTH/2 - 30, HEIGHT/2);
             for(char c : "PAUSED") glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c);
         }
-        
+
         glutSwapBuffers();
     }
 }
@@ -351,7 +351,7 @@ void keyboard(unsigned char key, int x, int y) {
             currentState = MENU;
         }
     }
-    
+
     glutPostRedisplay();
 }
 
@@ -360,7 +360,7 @@ void specialKeys(int key, int x, int y) {
     if(currentState == PLAYING) {
         if(key == GLUT_KEY_LEFT) basketX -= 30;
         else if(key == GLUT_KEY_RIGHT) basketX += 30;
-        
+
         if(basketX < 0) basketX = 0;
         if(basketX > WIDTH - BASKET_WIDTH) basketX = WIDTH - BASKET_WIDTH;
         glutPostRedisplay();
@@ -393,17 +393,17 @@ int main(int argc, char** argv) {
     glutInitWindowSize(WIDTH, HEIGHT);
     glutInitWindowPosition(100, 100);
     glutCreateWindow("Catch The Eggs");
-    
+
     srand(time(NULL));
     initOpenGL();
     initEggs();
-    
+
     glutDisplayFunc(display);
     glutKeyboardFunc(keyboard);
     glutSpecialFunc(specialKeys);
     glutPassiveMotionFunc(mouseMotion);
     glutTimerFunc(0, timer, 0);
-    
+
     glutMainLoop();
     return 0;
 <<<<<<< HEAD
@@ -576,6 +576,138 @@ void display() {
 
     glutSwapBuffers();
 }
-=======
+
 }
 >>>>>>> 78f5641b0d1da422796f8017be18970f36a5f763
+//marwa
+
+// Game states (update initial state to MENU)
+enum GameState { MENU, PLAYING, PAUSED, GAMEOVER };
+GameState currentState = MENU;  // Changed from PLAYING to MENU
+
+// Function declarations for displays
+void displayMenu();
+void displayPlaying();
+void displayPaused();
+void displayGameOver();
+
+// Menu display
+void displayMenu() {
+    drawRect(0, 0, WIDTH, HEIGHT, 0.1f, 0.1f, 0.2f);
+
+    drawText(WIDTH/2 - 70, HEIGHT - 150, "CATCH THE EGGS!");
+    drawText(WIDTH/2 - 60, HEIGHT - 220, "1. Start Game");
+    drawText(WIDTH/2 - 60, HEIGHT - 260, "2. High Score: " + to_string(highScore));
+    drawText(WIDTH/2 - 60, HEIGHT - 300, "3. Exit");
+
+    drawText(WIDTH/2 - 120, HEIGHT - 370, "Controls: Arrow Keys or Mouse to move basket");
+    drawText(WIDTH/2 - 100, HEIGHT - 400, "Press P to pause, ESC to exit during game");
+    drawText(WIDTH/2 - 130, HEIGHT - 430, "Catch: Golden(10) Blue(5) Normal(1) | Avoid Poop(-10)");
+    drawText(WIDTH/2 - 100, HEIGHT - 460, "3 Chickens are laying eggs from different positions!");
+}
+
+// Playing display (from PART 5)
+void displayPlaying() {
+    drawRect(0, 0, WIDTH, HEIGHT, 0.5f, 0.7f, 0.9f);
+    drawRect(0, 0, WIDTH, 100, 0.2f, 0.5f, 0.1f);
+
+    drawStick();
+    drawChicken();
+
+    for(int i = 0; i < MAX_EGGS; i++) {
+        if(eggs[i].active) drawEgg(eggs[i].x, eggs[i].y, eggs[i].type);
+    }
+
+    drawBasket();
+    drawText(10, HEIGHT - 30, "Score: " + to_string(score));
+    drawText(WIDTH - 150, HEIGHT - 30, "Time: " + to_string((int)timeLeft));
+}
+
+// Paused display
+void displayPaused() {
+    displayPlaying();
+    drawRect(WIDTH/2 - 120, HEIGHT/2 - 50, 240, 100, 0.0f, 0.0f, 0.0f);
+    drawText(WIDTH/2 - 35, HEIGHT/2 + 20, "PAUSED");
+    drawText(WIDTH/2 - 55, HEIGHT/2 - 10, "Press P to resume");
+}
+
+// Game Over display
+void displayGameOver() {
+    drawRect(0, 0, WIDTH, HEIGHT, 0.1f, 0.1f, 0.2f);
+    drawText(WIDTH/2 - 50, HEIGHT/2 + 50, "GAME OVER!");
+    drawText(WIDTH/2 - 40, HEIGHT/2 + 20, "Score: " + to_string(score));
+    drawText(WIDTH/2 - 55, HEIGHT/2 - 10, "High Score: " + to_string(highScore));
+    drawText(WIDTH/2 - 60, HEIGHT/2 - 50, "Press M for Menu");
+    drawText(WIDTH/2 - 70, HEIGHT/2 - 90, "Press ESC to Exit");
+}
+
+// Main display function
+void display() {
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    switch(currentState) {
+        case MENU: displayMenu(); break;
+        case PLAYING: displayPlaying(); break;
+        case PAUSED: displayPaused(); break;
+        case GAMEOVER: displayGameOver(); break;
+    }
+
+    glutSwapBuffers();
+}
+
+// Updated keyboard handler
+void keyboard(unsigned char key, int x, int y) {
+    switch(currentState) {
+        case MENU:
+            if(key == '1') {
+                currentState = PLAYING;
+                score = 0;
+                timeLeft = 60;
+                initEggs();
+            }
+            else if(key == '3' || key == 27) {
+                exit(0);
+            }
+            break;
+
+        case PLAYING:
+            if(key == 'p' || key == 'P') currentState = PAUSED;
+            else if(key == 27) currentState = MENU;
+            else if(key == 'a') basketX -= 30;
+            else if(key == 'd') basketX += 30;
+            break;
+
+        case PAUSED:
+            if(key == 'p' || key == 'P') currentState = PLAYING;
+            else if(key == 27) currentState = MENU;
+            break;
+
+        case GAMEOVER:
+            if(key == 'm' || key == 'M') {
+                if(score > highScore) highScore = score;
+                currentState = MENU;
+            }
+            else if(key == 27) exit(0);
+            break;
+    }
+
+    if(basketX < 0) basketX = 0;
+    if(basketX > WIDTH - BASKET_WIDTH) basketX = WIDTH - BASKET_WIDTH;
+    glutPostRedisplay();
+}
+
+// Updated mouse click
+void mouseClick(int button, int state, int x, int y) {
+    if(currentState == MENU && button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
+        int screenY = HEIGHT - y;
+        if(screenY > 380 && screenY < 420) {
+            currentState = PLAYING;
+            score = 0;
+            timeLeft = 60;
+            initEggs();
+        }
+        else if(screenY > 300 && screenY < 340) {
+            exit(0);
+        }
+    }
+}
