@@ -167,7 +167,6 @@ void drawSingleChicken(float x, float y, int chickenNum) {
     drawCircle(x + 40, y + 9, 2.5f, 0.0f, 0.0f, 0.0f);
     // Eye highlight
     drawCircle(x + 41, y + 10, 1, 1.0f, 1.0f, 1.0f);
-
     // Cheek blush
     drawCircle(x + 28, y + 2, 4, 1.0f, 0.5f, 0.5f);
 
@@ -210,7 +209,6 @@ void drawChicken() {
 void drawBackground() {
     // Sky
     drawRect(0, 0, WIDTH, HEIGHT, 0.5f, 0.7f, 0.9f);
-
     // Clouds
     glColor3f(1.0f, 1.0f, 1.0f);
     for(int c = 0; c < 3; c++) {
@@ -263,7 +261,6 @@ void displayPlaying() {
             drawEgg(eggs[i].x, eggs[i].y, eggs[i].type);
         }
     }
-
     drawBasket();
 
     // HUD
