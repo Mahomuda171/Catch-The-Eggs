@@ -209,17 +209,30 @@ void drawChicken() {
 void drawBackground() {
     // Sky
     drawRect(0, 0, WIDTH, HEIGHT, 0.5f, 0.7f, 0.9f);
+    // Sun
+    drawCircle(700, 500, 60, 1.0f, 0.9f, 0.2f); // glow
+    drawCircle(700, 500, 40, 1.0f, 0.85f, 0.0f); // core
     // Clouds
-    glColor3f(1.0f, 1.0f, 1.0f);
-    for(int c = 0; c < 3; c++) {
-        for(int i = 0; i < 360; i += 30) {
-            float rad = i * 3.14159f / 180.0f;
-            glBegin(GL_TRIANGLE_FAN);
-            glVertex2f(150 + c * 250 + 25 * cos(rad), HEIGHT - 150 + 15 * sin(rad));
-            glEnd();
-        }
-    }
+    // Clouds (clean and correct)
 
+glColor3f(1.0f, 1.0f, 1.0f);
+// Clouds (moved a bit higher)
+
+glColor3f(1.0f, 1.0f, 1.0f);
+
+// Cloud 1 (higher)
+// Clouds (professional clean version)
+drawCircle(150, HEIGHT - 120, 25, 1, 1, 1);
+drawCircle(180, HEIGHT - 110, 30, 1, 1, 1);
+drawCircle(210, HEIGHT - 120, 25, 1, 1, 1);
+
+drawCircle(400, HEIGHT - 90, 25, 1, 1, 1);
+drawCircle(430, HEIGHT - 80, 30, 1, 1, 1);
+drawCircle(460, HEIGHT - 90, 25, 1, 1, 1);
+
+drawCircle(620, HEIGHT - 140, 25, 1, 1, 1);
+drawCircle(650, HEIGHT - 130, 30, 1, 1, 1);
+drawCircle(680, HEIGHT - 140, 25, 1, 1, 1);
     // Ground
     drawRect(0, 0, WIDTH, 80, 0.3f, 0.6f, 0.2f);
 }
@@ -237,6 +250,9 @@ void drawText(float x, float y, string text, void* font = GLUT_BITMAP_HELVETICA_
 
 void displayMenu() {
     drawBackground();
+
+
+
 
     drawText(WIDTH/2 - 70, HEIGHT - 150, "CATCH THE EGGS!", GLUT_BITMAP_TIMES_ROMAN_24);
     drawText(WIDTH/2 - 60, HEIGHT - 220, "1. Start Game");
@@ -271,6 +287,9 @@ void displayPlaying() {
 void displayPaused() {
     displayPlaying();
     drawRect(WIDTH/2 - 120, HEIGHT/2 - 50, 240, 100, 0.0f, 0.0f, 0.0f);
+    drawText(20, HEIGHT - 30, "SCORE: " + to_string(score));
+    drawText(300, HEIGHT - 30, "TIME: " + to_string((int)timeLeft));
+    drawText(550, HEIGHT - 30, "HIGH SCORE: " + to_string(highScore));
     drawText(WIDTH/2 - 35, HEIGHT/2 + 20, "PAUSED");
     drawText(WIDTH/2 - 55, HEIGHT/2 - 10, "Press P to resume");
 }
@@ -314,6 +333,9 @@ void updateChickens() {
         if(chickens[i].active) {
             chickens[i].x += chickens[i].speed * chickens[i].direction;
 
+// Up-down floating animation
+            chickens[i].y = chickenY + sin(glutGet(GLUT_ELAPSED_TIME) * 0.005) * 5;
+
             if(chickens[i].x < 80) {
                 chickens[i].x = 80;
                 chickens[i].direction = 1;
@@ -354,7 +376,7 @@ void updateGame() {
 
     for(int i = 0; i < MAX_EGGS; i++) {
         if(eggs[i].active) {
-            eggs[i].y -= eggs[i].speed;
+            eggs[i].y -= eggs[i].speed * 0.7f;
 
             // Collision with basket
             if(eggs[i].y + 15 < 55 && eggs[i].y + 15 > 30 &&
