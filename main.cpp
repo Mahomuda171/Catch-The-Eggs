@@ -250,7 +250,7 @@ void initGame() {
 }
 
 void updateGame() {
-    // Move chickens (only left-right)
+    // Move chickens (left-right)
     for(int i=0; i<3; i++) {
         if(chickens[i].active) {
             chickens[i].x += chickens[i].speed * chickens[i].dir;
@@ -280,7 +280,7 @@ void updateGame() {
         }
     }
 
-    // Update eggs
+    // eggs
     for(int i=0; i<40; i++) {
         if(eggs[i].active) {
             eggs[i].y -= eggs[i].speed * 0.7;
