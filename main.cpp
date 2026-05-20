@@ -327,6 +327,7 @@ void keyboard(unsigned char key, int x, int y) {
     glutPostRedisplay();
 }
 
+
 void specialKeys(int key, int x, int y) {
     if(currentState == PLAYING) {
         if(key == GLUT_KEY_LEFT) basketX -= 35;
