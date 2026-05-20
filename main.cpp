@@ -59,14 +59,14 @@ void drawCircle(int cx, int cy, int r, float R, float G, float B) {
     }
 }
 
-// Egg shape (ellipse)
+// Egg shape
 void drawEgg(int x, int y, int type) {
     float R, G, B;
     if (type == 0) { R=1.0; G=0.85; B=0.65; }      // Normal
     else if (type == 1) { R=1.0; G=0.84; B=0.0; }  // Golden
     else if (type == 2) { R=0.3; G=0.6; B=1.0; }   // Blue
     else { R=0.4; G=0.2; B=0.1; }                  // Poop
-    
+
     glColor3f(R, G, B);
     for (int y1 = -16; y1 <= 16; y1++) {
         int x1 = 12 * sqrt(1 - (float)(y1*y1)/(16*16));
@@ -203,9 +203,9 @@ void displayMenu() {
 void displayPlaying() {
     drawBackground();
     drawStick();
-    for(int i=0; i<3; i++) 
+    for(int i=0; i<3; i++)
         if(chickens[i].active) drawChicken(chickens[i].x, chickens[i].y);
-    for(int i=0; i<40; i++) 
+    for(int i=0; i<40; i++)
         if(eggs[i].active) drawEgg(eggs[i].x, eggs[i].y, eggs[i].type);
     drawBasket();
     drawText(10, HEIGHT-30, "Score: " + to_string(score));
@@ -214,8 +214,8 @@ void displayPlaying() {
 
 void displayPaused() {
     displayPlaying();
-    drawRect(WIDTH/2 - 120, HEIGHT/2 - 50, 240, 100, 0,0,0);
-    drawText(WIDTH/2 - 35, HEIGHT/2 + 20, "PAUSED", GLUT_BITMAP_TIMES_ROMAN_24);
+    drawRect(WIDTH/2 - 90, HEIGHT/2 - 40, 2210, 100, 0,0,0);
+    drawText(WIDTH/2 - 15, HEIGHT/2 + 20, "PAUSED", GLUT_BITMAP_TIMES_ROMAN_24);
     drawText(WIDTH/2 - 55, HEIGHT/2 - 10, "Press P to resume");
 }
 
@@ -258,7 +258,7 @@ void updateGame() {
             if(chickens[i].x > WIDTH-80) { chickens[i].x = WIDTH-80; chickens[i].dir = -1; }
         }
     }
-    
+
     // Spawn eggs randomly
     if(rand() % 30 == 0) {
         for(int i=0; i<40; i++) {
@@ -279,12 +279,12 @@ void updateGame() {
             }
         }
     }
-    
+
     // Update eggs
     for(int i=0; i<40; i++) {
         if(eggs[i].active) {
             eggs[i].y -= eggs[i].speed * 0.7;
-            
+
             // Collision with basket
             if(eggs[i].y + 16 < 55 && eggs[i].y + 16 > 30 &&
                eggs[i].x + 12 > basketX && eggs[i].x - 12 < basketX + BASKET_W) {
