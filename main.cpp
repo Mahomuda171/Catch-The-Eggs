@@ -47,17 +47,7 @@ void timer(int);
 
 // ============= MIDPOINT CIRCLE FUNCTIONS =============
 
-// Filled circle using midpoint + scanline
-void drawCircle(int cx, int cy, int r, float R, float G, float B) {
-    glColor3f(R, G, B);
-    for (int y = -r; y <= r; y++) {
-        int x = sqrt(r*r - y*y);
-        glBegin(GL_LINES);
-        glVertex2f(cx - x, cy + y);
-        glVertex2f(cx + x, cy + y);
-        glEnd();
-    }
-}
+
 
 // Egg shape
 void drawEgg(int x, int y, int type) {
@@ -89,7 +79,7 @@ void drawRect(float x, float y, float w, float h, float R, float G, float B) {
     glEnd();
 }
 
-<<<<<<< HEAD
+
 // Draw circle
 void drawCircle(float x, float y, float radius, float r, float g, float b) {
     glColor3f(r, g, b);
@@ -130,8 +120,7 @@ void drawEgg(float x, float y, int type) {
     }
 }
 // Draw basket
-=======
->>>>>>> 3e060cb30c1a3fa9bcbe617e6e5abeb42f2d38bd
+
 void drawBasket() {
     // Basket shadow
     drawRect(basketX + 5, 28, BASKET_W, BASKET_H, 0.3, 0.3, 0.3);
