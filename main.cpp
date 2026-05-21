@@ -47,17 +47,7 @@ void timer(int);
 
 // ============= MIDPOINT CIRCLE FUNCTIONS =============
 
-// Filled circle using midpoint + scanline
-void drawCircle(int cx, int cy, int r, float R, float G, float B) {
-    glColor3f(R, G, B);
-    for (int y = -r; y <= r; y++) {
-        int x = sqrt(r*r - y*y);
-        glBegin(GL_LINES);
-        glVertex2f(cx - x, cy + y);
-        glVertex2f(cx + x, cy + y);
-        glEnd();
-    }
-}
+
 
 // Egg shape(ellipse)
 void drawEgg(int x, int y, int type) {
@@ -88,6 +78,48 @@ void drawRect(float x, float y, float w, float h, float R, float G, float B) {
     glVertex2f(x, y + h); // top left
     glEnd();
 }
+
+
+// Draw circle
+void drawCircle(float x, float y, float radius, float r, float g, float b) {
+    glColor3f(r, g, b);
+    glBegin(GL_TRIANGLE_FAN);
+    for(int i = 0; i < 360; i += 10) {
+        float rad = i * 3.14159f / 180.0f;
+        glVertex2f(x + radius * cos(rad), y + radius * sin(rad));
+    }
+    glEnd();
+}
+
+void drawEgg(float x, float y, int type) {
+
+    // 🥚 NORMAL / GOLD / BLUE EGGS (same shape)
+    if (type == 0 || type == 1 || type == 2) {
+
+        if (type == 0) glColor3f(1.0f, 0.85f, 0.65f);
+        else if (type == 1) glColor3f(1.0f, 0.84f, 0.0f);
+        else glColor3f(0.3f, 0.6f, 1.0f);
+
+        glBegin(GL_TRIANGLE_FAN);
+        for (int i = 0; i < 360; i += 20) {
+            float rad = i * 3.14159f / 180.0f;
+            glVertex2f(x + 12 * cos(rad), y + 15 * sin(rad));
+        }
+        glEnd();
+    }
+
+    // 💩 POOP (DIFFERENT SHAPE - SIMPLE)
+    else if (type == 3) {
+
+        glColor3f(0.4f, 0.2f, 0.1f);
+
+        // stack of circles (NOT egg shape)
+        drawCircle(x, y - 5, 10, 0.4f, 0.2f, 0.1f);
+        drawCircle(x, y + 5, 7, 0.45f, 0.25f, 0.1f);
+        drawCircle(x, y + 12, 5, 0.5f, 0.3f, 0.1f);
+    }
+}
+// Draw basket
 
 void drawBasket() {
     // Basket shadow
