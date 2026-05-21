@@ -59,7 +59,7 @@ void drawCircle(int cx, int cy, int r, float R, float G, float B) {
     }
 }
 
-// Egg shape
+// Egg shape(ellipse)
 void drawEgg(int x, int y, int type) {
     float R, G, B;
     if (type == 0) { R=1.0; G=0.85; B=0.65; }      // Normal
@@ -69,7 +69,7 @@ void drawEgg(int x, int y, int type) {
 
     glColor3f(R, G, B);
     for (int y1 = -16; y1 <= 16; y1++) {
-        int x1 = 12 * sqrt(1 - (float)(y1*y1)/(16*16));
+        int x1 = 12 * sqrt(1 - (float)(y1*y1)/(16*16)); //16=semi-height, 12=semi-width
         glBegin(GL_LINES);
         glVertex2f(x - x1, y + y1);
         glVertex2f(x + x1, y + y1);
@@ -82,10 +82,10 @@ void drawEgg(int x, int y, int type) {
 void drawRect(float x, float y, float w, float h, float R, float G, float B) {
     glColor3f(R, G, B);
     glBegin(GL_QUADS);
-    glVertex2f(x, y);
-    glVertex2f(x + w, y);
-    glVertex2f(x + w, y + h);
-    glVertex2f(x, y + h);
+    glVertex2f(x, y); // bottom left
+    glVertex2f(x + w, y); // bottom right
+    glVertex2f(x + w, y + h); // top right
+    glVertex2f(x, y + h); // top left
     glEnd();
 }
 
@@ -138,13 +138,13 @@ void drawChicken(float x, float y) {
     glVertex2f(x+42, y+8); glVertex2f(x+52, y+5); glVertex2f(x+42, y+2);
     glEnd();
     // Eye
-    drawCircle(x+38, y+8, 5, 1.0, 1.0, 1.0);
-    drawCircle(x+40, y+9, 2.5, 0, 0, 0);
-    drawCircle(x+41, y+10, 1, 1.0, 1.0, 1.0);
+    drawCircle(x+38, y+8, 5, 1.0, 1.0, 1.0); //White part
+    drawCircle(x+40, y+9, 2.5, 0, 0, 0); //Black part
+    drawCircle(x+41, y+10, 1, 1.0, 1.0, 1.0);//Highlighted part
     // Cheek blush
     drawCircle(x+28, y+2, 4, 1.0, 0.5, 0.5);
     // Tail feathers
-    glColor3f(0.8, 0.6, 0.2);
+    glColor3f(0.8, 0.6, 0.2); // Using 2triangle
     glBegin(GL_TRIANGLES);
     glVertex2f(x-18, y+5); glVertex2f(x-28, y+12); glVertex2f(x-22, y-2);
     glVertex2f(x-18, y+3); glVertex2f(x-30, y+5); glVertex2f(x-22, y-5);
@@ -242,6 +242,7 @@ void display() {
 
 void initGame() {
     chickens[0] = {150, chickenY, 1.5, 1, true};
+                //x, y, speed, dir, active
     chickens[1] = {WIDTH/2, chickenY, 1.2, -1, true};
     chickens[2] = {650, chickenY, 1.8, 1, true};
     for(int i=0; i<40; i++) eggs[i].active = false;
@@ -269,10 +270,10 @@ void updateGame() {
                     eggs[i].y = chickens[ch].y - 20;
                     eggs[i].speed = 2.5 + (rand()%50)/20.0;
                     int r = rand() % 10;
-                    if(r <= 6) eggs[i].type = 0;
-                    else if(r == 7) eggs[i].type = 1;
-                    else if(r == 8) eggs[i].type = 2;
-                    else eggs[i].type = 3;
+                    if(r <= 6) eggs[i].type = 0; //White
+                    else if(r == 7) eggs[i].type = 1; //Golden
+                    else if(r == 8) eggs[i].type = 2; //Blue
+                    else eggs[i].type = 3; //Poop
                     eggs[i].active = true;
                     break;
                 }
